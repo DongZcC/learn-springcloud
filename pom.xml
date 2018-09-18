@@ -9,6 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>shrimpcloud-api</module>
+        <module>springcloud-01</module>
+        <module>springcloud-provider</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -74,6 +76,12 @@
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.20</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
