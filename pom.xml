@@ -11,6 +11,8 @@
         <module>shrimpcloud-api</module>
         <module>springcloud-01</module>
         <module>springcloud-provider</module>
+        <module>high-performance</module>
+        <module>springcloud-consumer</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -86,5 +88,20 @@
         </dependencies>
     </dependencyManagement>
 
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.5.9.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

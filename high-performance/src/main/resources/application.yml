@@ -1,0 +1,32 @@
+spring:
+  profiles: peer1
+  application:
+    name: eureka-server
+
+
+server:
+  port: 1113
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer2:1114/eureka/
+  instance:
+    hostname: peer1
+
+---
+
+
+spring:
+  profiles: peer2
+  application:
+    name: eureka-server
+server:
+  port: 1114
+
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    service-url:
+      defaultZone: http://peer2:1113/eureka/
