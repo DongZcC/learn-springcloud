@@ -13,6 +13,8 @@
         <module>springcloud-provider</module>
         <module>high-performance</module>
         <module>springcloud-consumer</module>
+        <module>feign-consumer</module>
+        <module>hello-service-api</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -28,6 +30,22 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-dependencies</artifactId>-->
+            <!--<version>Brixtom.SR5</version>-->
+            <!--<type>pom</type>-->
+            <!--<scope>import</scope>-->
+            <!--</dependency>-->
+
+            <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-dependencies</artifactId>-->
+            <!--<version>1.3.7.RELEASE</version>-->
+            <!--<type>pom</type>-->
+            <!--<scope>import</scope>-->
+            <!--</dependency>-->
+
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -80,13 +98,16 @@
                 <version>${log4j.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.16.20</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
